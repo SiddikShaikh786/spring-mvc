@@ -40,11 +40,16 @@ public ModelAndView help() {
 	ModelAndView modelAndView = new ModelAndView();
 	
 	//set up data
+	List<Integer> num= new ArrayList<Integer>();
+	num.add(1);
+	num.add(2);
+	num.add(3);
+	
 	modelAndView.addObject("name","Shaikh");
 	modelAndView.addObject("ID",100);
 	LocalDateTime now =  LocalDateTime.now();
 	modelAndView.addObject("date",now);
-	
+	modelAndView.addObject("number",num);
 	//set up view name
 	modelAndView.setViewName("help");
 	
